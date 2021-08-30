@@ -11,7 +11,7 @@ Usage: pyTri_m.py [OPTIONS] <br />
   python THETIS_T3.py --file_name --bathy_file_name --num_iterrations[5]
   --elem_start_size[10000] --elem_end_size[100] --init_ratio[0.80]
   --final_ratio[2.50]
-
+<br />
 Options:
   --file_name TEXT           The name of the .poly file.
   --bathy_file_name TEXT     The name of the bathymetry file, this should
