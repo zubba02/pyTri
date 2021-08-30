@@ -3,11 +3,6 @@ This program provides a python interface to Triangle [https://www.cs.cmu.edu/~qu
 
 Usage: pyTri_m.py [OPTIONS] 
 
-  This program provides a python interface to Triangle
-  [https://www.cs.cmu.edu/~quake/triangle.html], to generate triangular
-  meshes for geophysical domains based on the bathymetry for use in
-  Hydrodynamic models such as Swash, Swan and Thetis.
-
   python pyTri_m.py --file_name --bathy_file_name --num_iterrations[5]
   --elem_start_size[10000] --elem_end_size[100] --init_ratio[0.80]
   --final_ratio[2.50] 
