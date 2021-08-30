@@ -1,0 +1,14 @@
+# 4 vertices of a rectangle of 5m by 1m
+4 2 0 0    # no attributes and markers here
+1 0 0
+2 0 315
+3 242 0
+4 242 315
+# 4 segments of rectangle with boundary markers 
+4 1
+1 1 2 101    # south
+2 2 3 102    # east
+3 3 4 103    # north
+4 4 1 104    # west, another marker for this side
+# no holes 
+0
