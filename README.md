@@ -13,19 +13,19 @@ Usage: pyTri_m.py [OPTIONS]
   --final_ratio[2.50] 
   
 Options: 
-  --file_name TEXT           The name of the .poly file. 
+  --file_name [TEXT] :          The name of the .poly file. 
   
-  --bathy_file_name TEXT     The name of the bathymetry file, this should include a header as the first line will be skipped!. The file format should be : | bathy,x,y | 
+  --bathy_file_name [TEXT] :     The name of the bathymetry file, this should include a header as the first line will be skipped!. The file format should be : | bathy,x,y | 
                               
                               
-  --num_iterrations INTEGER  Number of iterations to increase the mesh resolution (Default:5) 
+  --num_iterrations [INTEGER] : Number of iterations to increase the mesh resolution (Default:5) 
                              
-  --elem_start_size INTEGER  Size of Triangular Element at initial iteration (m) (Default:10000) 
+  --elem_start_size [INTEGER] : Size of Triangular Element at initial iteration (m) (Default:10000) 
                              
-  --elem_end_size INTEGER    Size of Triangular Element at final iteration (m) (Default:100) 
+  --elem_end_size [INTEGER] :   Size of Triangular Element at final iteration (m) (Default:100) 
                              
-  --init_ratio FLOAT         Initial Alpha for setting the mesh size (Default:0.80). The mesh size of the initial iteration will be set using the ratio between this value and the depth
+  --init_ratio [FLOAT] :        Initial Alpha for setting the mesh size (Default:0.80). The mesh size of the initial iteration will be set using the ratio between this value and the depth
                              
-  --final_ratio FLOAT        Final Alpha for setting the mesh size (Default:2.5). The mesh size of the final iteration will be set using the ratio between this value and the depth 
+  --final_ratio [FLOAT] :       Final Alpha for setting the mesh size (Default:2.5). The mesh size of the final iteration will be set using the ratio between this value and the depth 
                              
-  --help                     Show this message and exit. 
+  --help  :                   Show this message and exit. 
