@@ -28,4 +28,4 @@ Options:
                              
   --final_ratio [FLOAT] :       Final Alpha for setting the mesh size (Default:2.5). The mesh size of the final iteration will be set using the ratio between this value and the depth 
                              
-  --help  :                   Show this message and exit. 
+  --help
