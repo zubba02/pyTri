@@ -36,13 +36,18 @@ import matplotlib.pyplot as plt
 
 @click.option('--elem_end_size', prompt='Final General Element Size :', help='Size of Triangular Element at final iteration (m) (Default:100)', default=100)
 
-@click.option('--init_ratio', prompt='Initial depth ratio :', help='Initial Alpha for setting the mesh size (Default:0.80). The mesh size of the initial iteration will be set using the ratio between this value and the depth', default=0.80)
 
-@click.option('--final_ratio', prompt='Final depth ratio :', help='Final Alpha for setting the mesh size (Default:2.5). The mesh size of the final iteration will be set using the ratio between this value and the depth', default=2.50)
+# instead of using a user provied fixed edpth ratio, we try to derive the ratios from the x an the y lenth scales that are involved:
+
+#@click.option('--init_ratio', prompt='Initial depth ratio :', help='Initial Alpha for setting the mesh size (Default:0.80). The mesh size of the initial iteration will be set using the ratio between this value and the depth', default=0.80)
+#@click.option('--final_ratio', prompt='Final depth ratio :', help='Final Alpha for setting the mesh size (Default:2.5). The mesh size of the final iteration will be set using the ratio between this value and the depth', default=2.50)
+
+@click.option('--x_scale', prompt='length of domain in the x axis :', help='length scale of x domain in m', default=1000.0)
+
+@click.option('--y_scale', prompt='length of domain in the y axis :', help='length scale of y domain in m', default=1000.0)
 
 
-
-def iter_mesh (file_name, bathy_file_name, num_iterrations, elem_start_size, elem_end_size, init_ratio, final_ratio):
+def iter_mesh (file_name, bathy_file_name, num_iterrations, elem_start_size, elem_end_size, x_scale, y_scale):
 
     '''
     This program provides a python interface to Triangle [https://www.cs.cmu.edu/~quake/triangle.html], to generate triangular meshes for geophysical domains based on the bathymetry for use in Hydrodynamic models such as Swash, Swan and Thetis.
@@ -53,6 +58,10 @@ def iter_mesh (file_name, bathy_file_name, num_iterrations, elem_start_size, ele
     ##################
 
     #RUN SOME TESTS!
+
+    init_ratio = x_scale/5000.0
+
+    final_ratio = init_ratio*10.0
 
     print ('RUNNING SOME INITIAL TESTS!')
 
